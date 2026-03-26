@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-forest: #1B4332;
+  --color-forest-light: #2D6A4F;
+  --color-forest-dark: #143326;
+  --color-amber: #F59E0B;
+  --color-amber-dark: #D97706;
+  --color-amber-light: #FCD34D;
+  --color-cream: #FEFCE8;
+  --color-cream-dark: #FEF9C3;
+  --color-ink: #1C1917;
+  --color-ink-light: #44403C;
+  --color-sage: #86EFAC;
+  --color-sage-light: #BBF7D0;
+  --color-sage-dark: #4ADE80;
+
+  --font-heading: 'Instrument Serif', 'Georgia', serif;
+  --font-body: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+::selection {
+  background-color: var(--color-sage);
+  color: var(--color-forest-dark);
+}
