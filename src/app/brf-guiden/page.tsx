@@ -50,22 +50,24 @@ export default function BRFGuidePage() {
         <h2 className="font-heading text-2xl text-forest mb-6">Resurser att ladda ner</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {[
-            { title: 'BRF Energi-checklista', format: 'PDF' },
-            { title: 'Mall: Styrelseprotokoll energibeslut', format: 'PDF' },
-            { title: 'Mall: Informationsbrev till boende', format: 'PDF' },
-            { title: 'Jämförelsemall för offerter', format: 'PDF' },
+            { title: 'BRF Energi-checklista', href: '/dokument/brf-energi-checklista', desc: 'Komplett checklista för hela processen' },
+            { title: 'Mall: Styrelseprotokoll', href: '/dokument/styrelseprotokoll-energibeslut', desc: 'Färdig mall för styrelsebeslut' },
+            { title: 'Mall: Informationsbrev', href: '/dokument/informationsbrev-till-boende', desc: 'Brev att skicka till boende' },
+            { title: 'Jämförelsemall för offerter', href: '/dokument/jamforelsemall-offerter', desc: 'Jämför installatörer sida vid sida' },
           ].map((resource) => (
-            <Card key={resource.title} hover className="cursor-pointer">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-forest/10 flex items-center justify-center flex-shrink-0">
-                  <FileDown className="w-5 h-5 text-forest" />
+            <a key={resource.title} href={resource.href} target="_blank">
+              <Card hover className="cursor-pointer">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-forest/10 flex items-center justify-center flex-shrink-0">
+                    <FileDown className="w-5 h-5 text-forest" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-forest text-sm">{resource.title}</p>
+                    <p className="text-xs text-ink-light">{resource.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-medium text-forest text-sm">{resource.title}</p>
-                  <p className="text-xs text-ink-light">{resource.format} — Kommer snart</p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </a>
           ))}
         </div>
       </section>

@@ -37,6 +37,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-white/60">
               <li><a href="/kalkylator" className="hover:text-white transition-colors">Besparingsräknaren</a></li>
               <li><a href="/brf-guiden" className="hover:text-white transition-colors">BRF-guiden</a></li>
+              <li><a href="/installator" className="hover:text-white transition-colors">Hitta installatör</a></li>
             </ul>
           </div>
 
@@ -56,6 +57,7 @@ export function Footer() {
               Om oss
             </h4>
             <ul className="space-y-2 text-sm text-white/60">
+              <li><a href="/aktuellt" className="hover:text-white transition-colors">Aktuellt</a></li>
               <li><a href="/om" className="hover:text-white transition-colors">Om Energiklok</a></li>
               <li><a href="/om#kontakt" className="hover:text-white transition-colors">Kontakt</a></li>
             </ul>

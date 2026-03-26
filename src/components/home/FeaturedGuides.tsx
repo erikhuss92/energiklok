@@ -1,4 +1,4 @@
-import { articles } from '@/data/articles'
+import { articles, CATEGORY_LABELS } from '@/data/articles'
 import { ArticleCard } from '@/components/content/ArticleCard'
 import { Button } from '@/components/ui/Button'
 
@@ -20,7 +20,14 @@ export function FeaturedGuides() {
       </div>
       <div className="grid md:grid-cols-3 gap-8">
         {articles.map((article) => (
-          <ArticleCard key={article.slug} article={article} />
+          <ArticleCard
+            key={article.slug}
+            title={article.title}
+            description={article.description}
+            href={`/kunskap/${article.slug}`}
+            categoryLabel={CATEGORY_LABELS[article.category] || article.category}
+            readingTime={article.readingTime}
+          />
         ))}
       </div>
       <div className="mt-8 text-center md:hidden">

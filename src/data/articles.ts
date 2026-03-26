@@ -43,3 +43,9 @@ export const CATEGORIES = [
   { id: 'batterier', label: 'Batterier' },
   { id: 'energieffektivisering', label: 'Energieffektivisering' },
 ] as const
+
+export const CATEGORY_LABELS: Record<string, string> = {
+  solenergi: 'Solenergi',
+  batterier: 'Batterier',
+  energieffektivisering: 'Energieffektivisering',
+}

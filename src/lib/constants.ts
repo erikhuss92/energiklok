@@ -7,6 +7,8 @@ export const SITE = {
 export const NAV_LINKS = [
   { href: '/kalkylator', label: 'Kalkylator' },
   { href: '/brf-guiden', label: 'BRF-guiden' },
+  { href: '/installator', label: 'Installatörer' },
   { href: '/kunskap', label: 'Kunskap' },
+  { href: '/aktuellt', label: 'Aktuellt' },
   { href: '/om', label: 'Om oss' },
 ] as const
